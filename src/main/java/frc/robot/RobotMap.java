@@ -26,6 +26,10 @@ public class RobotMap {
 
   public static final int LEFT_TALON_PORT = 0;
   public static final int RIGHT_TALON_PORT = 1;
+
   public static final int OI_DRIVER_CONTROLLER = 0;
+
+  public static final int HATCH_SOLENOID_PORT1 = 0;
+  public static final int HATCH_SOLENOID_PORT2 = 1;
   
 }

@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
+import frc.robot.commands.DriveArcade;
 
 /**
  * Add your docs here.
@@ -25,7 +26,7 @@ public class Drivetrain extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new DriveArcade());
   }
 
   public Drivetrain() {
@@ -37,5 +38,7 @@ public class Drivetrain extends Subsystem {
 
   public void drive(double moveSpeed, double rotateSpeed) {
     diffDrive.arcadeDrive(moveSpeed, rotateSpeed);
+    //diffDrive.tankDrive(leftSpeed, rightSpeed);
+    //diffDrive.curvatureDrive(moveSpeed, rotateSpeed, quickTurn);
   }
 }
